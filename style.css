@@ -12,6 +12,7 @@ html {
 body {
   background: #f4f4f4;
   color: #333;
+  text-align: center;
 }
 
 .container {
@@ -25,21 +26,20 @@ body {
   position: fixed;
   width: 100%;
   top: 0;
-  background: rgba(255,255,255,0.95);
-  backdrop-filter: blur(10px);
+  background: #ffffff;
   border-bottom: 1px solid #ddd;
   z-index: 999;
+  padding: 10px 0;
 }
 
 .header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
 }
 
 .logo {
-  height: 50px;
+  height: 45px;
 }
 
 /* Hero */
@@ -47,25 +47,32 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-top: 120px;
+  justify-content: center;
+  padding-top: 80px; /* مناسب للهيدر */
 }
 
 .hero-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  max-width: 500px;
 }
 
 .badge {
-  background: #e0e0e0;
-  padding: 12px 24px;
+  background: #ddd;
+  padding: 10px 20px;
   border-radius: 50px;
   display: inline-block;
   margin-bottom: 20px;
 }
 
 h1 {
-  font-size: 56px;
+  font-size: 48px;
   margin-bottom: 20px;
 }
 
@@ -77,32 +84,31 @@ p {
 .buttons {
   display: flex;
   gap: 16px;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
 .btn-primary {
   background: #6a2fb5;
-  padding: 16px 32px;
+  padding: 14px 32px;
   border-radius: 12px;
   color: #fff;
   text-decoration: none;
-  text-align: center;
 }
 
 .btn-secondary {
   border: 2px solid #6a2fb5;
-  padding: 14px 30px;
+  padding: 12px 30px;
   border-radius: 12px;
   color: #6a2fb5;
   text-decoration: none;
-  text-align: center;
 }
 
 /* Card */
 .card {
   background: #ffffff;
   border-radius: 24px;
-  padding: 60px;
+  padding: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -116,14 +122,13 @@ p {
 
 /* Sections */
 .section {
-  padding: 100px 0;
+  padding: 80px 0;
   background: #ffffff;
 }
 
 .title {
-  text-align: center;
-  font-size: 48px;
-  margin-bottom: 60px;
+  font-size: 36px;
+  margin-bottom: 40px;
 }
 
 /* Services */
@@ -131,12 +136,14 @@ p {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
+  justify-items: center;
 }
 
 .service {
   background: #e0e0e0;
-  padding: 40px;
+  padding: 30px;
   border-radius: 16px;
+  text-align: center;
 }
 
 .service h3 {
@@ -147,7 +154,6 @@ p {
 .service p {
   color: #333;
   opacity: 0.8;
-  margin: 0;
 }
 
 .service i {
@@ -158,19 +164,17 @@ p {
 
 /* CTA */
 .cta {
-  text-align: center;
-  padding: 120px 20px;
+  padding: 80px 20px;
   background: #f4f4f4;
 }
 
 .cta .btn-primary.large {
   font-size: 20px;
-  padding: 20px 40px;
+  padding: 18px 40px;
 }
 
 /* Footer */
 .footer {
-  text-align: center;
   padding: 40px;
   background: #e0e0e0;
   color: #333;
@@ -188,56 +192,40 @@ p {
   transform: translateY(0);
 }
 
-/* ================== Responsive for Mobile ================== */
+/* Responsive للجوال */
 @media screen and (max-width: 768px) {
   .hero-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
+    flex-direction: column;
   }
 
   h1 {
-    font-size: 36px;
+    font-size: 32px;
   }
 
   .badge {
-    padding: 10px 20px;
     font-size: 14px;
-  }
-
-  .buttons {
-    flex-direction: column;
-    gap: 12px;
+    padding: 8px 16px;
   }
 
   .btn-primary,
   .btn-secondary {
     width: 100%;
-    padding: 14px 0;
+    padding: 12px 0;
     font-size: 16px;
   }
 
   .card {
-    padding: 40px;
-  }
-
-  .title {
-    font-size: 36px;
-    margin-bottom: 40px;
-  }
-
-  .service {
     padding: 30px;
   }
 
-  .cta {
-    padding: 80px 20px;
+  .title {
+    font-size: 28px;
+    margin-bottom: 30px;
   }
 
   .cta .btn-primary.large {
-    font-size: 18px;
-    padding: 16px 0;
     width: 80%;
-    max-width: 300px;
+    max-width: 250px;
     margin: auto;
     display: block;
   }
