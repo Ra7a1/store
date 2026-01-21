@@ -6,6 +6,7 @@ const observer = new IntersectionObserver(
   },
   { threshold: 0.15, rootMargin: "0px 0px -50px 0px" }
 );
+
 document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -14,13 +15,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     const target = document.querySelector(anchor.getAttribute("href"));
     if (!target) return;
     const headerOffset = 120;
-    const elementPosition = target.getBoundingClientRect().top;
-    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+    const offsetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
     window.scrollTo({ top: offsetPosition, behavior: "smooth" });
   });
 });
 
-/* Modal */
 const orderBtn = document.getElementById("openOrderModal");
 const orderBtn2 = document.getElementById("openOrderModal2");
 const modal = document.getElementById("orderModal");
@@ -34,6 +33,4 @@ const closeModal = document.getElementById("closeModal");
 });
 
 closeModal.addEventListener("click", () => modal.classList.remove("show"));
-modal.addEventListener("click", e => {
-  if (e.target === modal) modal.classList.remove("show");
-});
+modal.addEventListener("click", e => { if (e.target === modal) modal.classList.remove("show"); });
