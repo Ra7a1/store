@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f4f4f4;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 24px;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #ddd;
+  z-index: 999;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.logo {
+  height: 50px;
+}
+
+/* Hero */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 120px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.badge {
+  background: #e0e0e0;
+  padding: 12px 24px;
+  border-radius: 50px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 56px;
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 30px;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.btn-primary {
+  background: #6a2fb5;
+  padding: 16px 32px;
+  border-radius: 12px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn-secondary {
+  border: 2px solid #6a2fb5;
+  padding: 14px 30px;
+  border-radius: 12px;
+  color: #6a2fb5;
+  text-decoration: none;
+}
+
+/* Card */
+.card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card i {
+  width: 80px;
+  height: 80px;
+  color: #6a2fb5;
+}
+
+/* Sections */
+.section {
+  padding: 100px 0;
+  background: #ffffff;
+}
+
+.title {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 60px;
+}
+
+/* Services */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.service {
+  background: #e0e0e0;
+  padding: 40px;
+  border-radius: 16px;
+}
+
+.service h3 {
+  color: #6a2fb5;
+  margin: 16px 0 10px;
+}
+
+.service p {
+  color: #333;
+  opacity: 0.8;
+  margin: 0;
+}
+
+.service i {
+  color: #6a2fb5;
+  width: 40px;
+  height: 40px;
+}
+
+/* CTA */
+.cta {
+  text-align: center;
+  padding: 120px 20px;
+  background: #f4f4f4;
+}
+
+.cta .btn-primary.large {
+  font-size: 20px;
+  padding: 20px 40px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 40px;
+  background: #e0e0e0;
+  color: #333;
+}
+
+/* Animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
