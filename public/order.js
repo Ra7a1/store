@@ -8,9 +8,7 @@ const successMessageModal = document.getElementById("successMessageModal");
 serviceTypeModal.addEventListener("change", () => {
   if (serviceTypeModal.value === "بوتات مخصصة" || serviceTypeModal.value === "برمجة مواقع ويب") {
     descriptionFieldModal.classList.remove("hidden");
-  } else {
-    descriptionFieldModal.classList.add("hidden");
-  }
+  } else descriptionFieldModal.classList.add("hidden");
 });
 
 modalForm.addEventListener("submit", async e => {
@@ -22,7 +20,6 @@ modalForm.addEventListener("submit", async e => {
     phone: document.getElementById("phoneModal").value,
     description: document.getElementById("descriptionModal").value
   };
-
   try {
     await fetch(API_URL, {
       method: "POST",
@@ -32,7 +29,5 @@ modalForm.addEventListener("submit", async e => {
     modalForm.reset();
     descriptionFieldModal.classList.add("hidden");
     successMessageModal.classList.remove("hidden");
-  } catch (err) {
-    console.error("Error sending order:", err);
-  }
+  } catch (err) { console.error("Error sending order:", err); }
 });
