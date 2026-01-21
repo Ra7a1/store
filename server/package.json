@@ -1,14 +1,15 @@
 {
-  "name": "ra7a-backend",
+  "name": "ra7a-server",
   "version": "1.0.0",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "start": "node index.js"
   },
   "dependencies": {
     "express": "^4.18.2",
     "cors": "^2.8.5",
+    "body-parser": "^1.20.2",
     "node-fetch": "^3.3.2"
-  }
+  },
+  "type": "module"
 }
