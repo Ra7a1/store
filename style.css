@@ -77,6 +77,7 @@ p {
 .buttons {
   display: flex;
   gap: 16px;
+  flex-wrap: wrap;
 }
 
 .btn-primary {
@@ -85,6 +86,7 @@ p {
   border-radius: 12px;
   color: #fff;
   text-decoration: none;
+  text-align: center;
 }
 
 .btn-secondary {
@@ -93,6 +95,7 @@ p {
   border-radius: 12px;
   color: #6a2fb5;
   text-decoration: none;
+  text-align: center;
 }
 
 /* Card */
@@ -183,4 +186,59 @@ p {
 .reveal.show {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ================== Responsive for Mobile ================== */
+@media screen and (max-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  .badge {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    padding: 14px 0;
+    font-size: 16px;
+  }
+
+  .card {
+    padding: 40px;
+  }
+
+  .title {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  .service {
+    padding: 30px;
+  }
+
+  .cta {
+    padding: 80px 20px;
+  }
+
+  .cta .btn-primary.large {
+    font-size: 18px;
+    padding: 16px 0;
+    width: 80%;
+    max-width: 300px;
+    margin: auto;
+    display: block;
+  }
 }
