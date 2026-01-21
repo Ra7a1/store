@@ -67,19 +67,21 @@
 <section class="cta reveal">
   <h2>جاهز تبدأ؟</h2>
   <p>انضم إلى سيرفرنا الآن</p>
-  <a class="btn-primary large" href="#" id="openOrderModal2">
+  <a class="btn-primary large" href="https://discord.gg/6zHF3ykqJG" target="_blank">
     انضم الآن
   </a>
 </section>
 
 <footer class="footer">
-  <p>© 2025 RA7A Store</p>
+  <p>© 2026 RA7A Store</p>
 </footer>
 
+<!-- ======= Modal ======= -->
 <div class="modal" id="orderModal">
   <div class="modal-content">
     <button class="modal-close" id="closeModal">إغلاق</button>
     <h2 class="title">طلب خدمة</h2>
+
     <form class="order-form" id="orderFormModal">
       <div class="field">
         <label>نوع الطلب</label>
@@ -92,23 +94,29 @@
           <option>أخرى</option>
         </select>
       </div>
+
       <div class="field">
         <label>اسمك</label>
         <input type="text" id="nameModal" placeholder="اكتب اسمك" required>
       </div>
+
       <div class="field">
         <label>يوزر الديسكورد</label>
         <input type="text" id="discordModal" placeholder="username#0000" required>
       </div>
+
       <div class="field">
         <label>رقم الجوال</label>
         <input type="tel" id="phoneModal" placeholder="05xxxxxxxx" required>
       </div>
+
       <div class="field hidden" id="descriptionFieldModal">
         <label>وصف الطلب</label>
         <textarea id="descriptionModal" placeholder="اشرح طلبك بالتفصيل"></textarea>
       </div>
+
       <button type="submit" class="btn-primary large full">إرسال الطلب</button>
+
       <p class="success-message hidden" id="successMessageModal">
         ✅ تم استلام طلبك، سيتم التواصل معك قريباً
       </p>
