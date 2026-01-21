@@ -96,6 +96,7 @@ p {
   color: #fff;
   text-decoration: none;
   transition: 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* ظل خفيف */
 }
 
 .btn-primary:hover {
@@ -158,12 +159,18 @@ p {
 }
 
 .service {
-  background: #e0e0e0;
+  background: linear-gradient(135deg, #5a2fb5, #b57aff); /* تدرج بنفسجي غامق → فاتح */
   padding: 30px;
   border-radius: 16px;
   text-align: center;
   transition: 0.3s ease;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  color: #fff;
+  min-height: 250px; /* حجم موحد لكل المربعات */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .service:hover {
@@ -171,17 +178,14 @@ p {
 }
 
 .service h3 {
-  color: #6a2fb5;
   margin: 16px 0 10px;
 }
 
 .service p {
-  color: #333;
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
 .service i {
-  color: #6a2fb5;
   width: 40px;
   height: 40px;
 }
@@ -195,6 +199,7 @@ p {
 .cta .btn-primary.large {
   font-size: 20px;
   padding: 18px 40px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* ظل خفيف */
 }
 
 /* Footer */
