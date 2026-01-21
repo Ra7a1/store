@@ -15,6 +15,7 @@ body {
   text-align: center;
 }
 
+/* Container */
 .container {
   max-width: 1200px;
   margin: auto;
@@ -48,7 +49,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 80px; /* مناسب للهيدر */
+  padding-top: 80px;
 }
 
 .hero-grid {
@@ -94,6 +95,11 @@ p {
   border-radius: 12px;
   color: #fff;
   text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #5a25a0;
 }
 
 .btn-secondary {
@@ -102,22 +108,34 @@ p {
   border-radius: 12px;
   color: #6a2fb5;
   text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #6a2fb5;
+  color: #fff;
 }
 
 /* Card */
 .card {
   background: #ffffff;
   border-radius: 24px;
-  padding: 40px;
+  padding: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 .card i {
   width: 80px;
   height: 80px;
   color: #6a2fb5;
+}
+
+.card:hover {
+  transform: translateY(-10px);
 }
 
 /* Sections */
@@ -144,6 +162,12 @@ p {
   padding: 30px;
   border-radius: 16px;
   text-align: center;
+  transition: 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.service:hover {
+  transform: translateY(-5px);
 }
 
 .service h3 {
@@ -153,7 +177,7 @@ p {
 
 .service p {
   color: #333;
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 .service i {
